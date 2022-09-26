@@ -4,7 +4,7 @@ const Homepage = () => {
   return (
     <>
       <Head>
-        <title>Contact Page</title>
+        <title>Homepage</title>
       </Head>
 
       <main className="text-3xl text-center font-bold underline bg-red-500">
