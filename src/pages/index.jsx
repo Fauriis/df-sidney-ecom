@@ -7,7 +7,9 @@ const Homepage = () => {
         <title>Contact Page</title>
       </Head>
 
-      <main>hello from next</main>
+      <main className="text-3xl text-center font-bold underline bg-red-500">
+        Homepage
+      </main>
     </>
   );
 };
