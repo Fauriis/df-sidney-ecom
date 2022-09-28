@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useState } from 'react';
 import { CgMenu } from 'react-icons/cg';
@@ -48,3 +49,25 @@ export const Header = () => {
     </>
   );
 };
+=======
+import {useState} from 'react';
+import {CgMenu} from 'react-icons-cg'
+import {FaApple} from 'react-icons-fa'
+import Link from 'next/link';
+
+export const Header = () =>{
+const [menuOpen, setMenuOpen] = useState(false)
+
+  return(
+    <>
+    <section className='flex justify-between items-center h-full'>
+
+    </section>
+
+    <nav className='{ absolute top-0 left-0 h-screen w-screen text-white bg-neutral-900'>
+    </nav>
+    </>
+  )
+}
+
+>>>>>>> 697912ceb38cb0af8043295238f3990baf5ca77d
