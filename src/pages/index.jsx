@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Layout } from '../layouts';
 
-const Homepage = () => {
+const Home = () => {
   return (
     <>
       <Head>
@@ -9,11 +9,10 @@ const Homepage = () => {
       </Head>
 
       <Layout>
-        <main>www</main>
+        <main>ww</main>
       </Layout>
     </>
   );
 };
 
-export default Homepage;
-// obligatoriu returnat un default export
+export default Home;
