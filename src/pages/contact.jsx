@@ -8,7 +8,7 @@ const ContactPage = () => {
       </Head>
 
       <Layout>
-
+<main>hello</main>
       </Layout>
     </>
   );
