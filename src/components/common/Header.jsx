@@ -22,7 +22,7 @@ export const Header = () => {
             setMenuOpen(!menuOpen);
           }}
         >
-          <CgMenu size="32"></CgMenu>
+          <CgMenu size="30"></CgMenu>
         </button>
       </section>
 
