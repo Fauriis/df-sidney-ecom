@@ -9,7 +9,7 @@ const ContactPage = () => {
       </Head>
 
       <Layout>
-        <main>hgdf</main>
+        <main>hgdfghgh</main>
       </Layout>
     </>
   );
