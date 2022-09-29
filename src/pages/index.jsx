@@ -9,6 +9,7 @@ const Home = () => {
       </Head>
 
       <Layout>
+        <main>jsjjs</main>
         <main>ww</main>
       </Layout>
     </>
