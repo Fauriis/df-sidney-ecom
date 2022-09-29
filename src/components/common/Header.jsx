@@ -43,6 +43,7 @@ export const Header = () => {
               <a title="Contact">Contact</a>
             </Link>
           </li>
+          <button>Click</button>
         </ul>
       </nav>
     </>
