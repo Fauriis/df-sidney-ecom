@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Layout } from '../layouts';
+import { Layout } from '../layout';
 
 const Home = () => {
   return (
