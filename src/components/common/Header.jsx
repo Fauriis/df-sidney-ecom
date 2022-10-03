@@ -1,17 +1,18 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { CgClose, CgMenu } from 'react-icons/cg';
-import { FaApple } from 'react-icons/fa';
+import { FaSun } from 'react-icons/fa';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      <section className="flex justify-between items-center h-full z-10 relative lg:flex-col lg:py-8">
+      <section className="flex justify-between items-center h-full z-10 relative lg:flex-col lg:py-4">
         <Link href="/">
-          <a title="Home">
-            <FaApple size="32"></FaApple>
+          <a title="Home" className=" flex flex-col">
+            <FaSun size="32" className="hover:animate-spin"></FaSun>
+            <p className="text-center">SUN</p>
           </a>
         </Link>
 
@@ -28,14 +29,18 @@ export const Header = () => {
             <CgMenu size="32"></CgMenu>
           )}
         </button>
+
+        <div className="lg:block hidden ">
+          <span className="block w-4 h-4 bg-white rounded-full"></span>
+        </div>
       </section>
 
       <nav
-        className={`absolute left-0 ${
-          menuOpen ? 'top-0 ' : '-top-full '
-        }  h-screen w-screen lg:w-1/2 text-white bg-neutral-900 `}
+        className={`absolute left-0 -top-full transition-transform transform-gpu ${
+          menuOpen ? 'translate-y-full' : ' '
+        }  h-screen w-screen lg:w-screen-1/3 text-white bg-neutral-900 `}
       >
-        <ul className="hover:text-pink-200 text-lg text-center uppercase lg:mt-7">
+        <ul className="hover:text-pink-200 text-lg text-center uppercase lg:text-2xl lg:pt-8 animate-pulse">
           <li>
             <Link href="/">
               <a title="Home">Home</a>
