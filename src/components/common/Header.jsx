@@ -52,6 +52,12 @@ export const Header = () => {
               <a title="Contact">Contact</a>
             </Link>
           </li>
+
+          <li>
+            <Link href="/aboutUs">
+              <a title="About us">About Us</a>
+            </Link>
+          </li>
         </ul>
       </nav>
     </>

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { FaPhone } from 'react-icons/fa';
+import { AiTwotoneAppstore } from 'react-icons/ai';
 
 const buttonClasses = `w-24 h-24 border-l border-zinc-400 flex justify-center items-center`;
 
@@ -17,7 +19,7 @@ export const GridControls = () => {
             setItemsPerRow('1/row');
           }}
         >
-          1
+          <AiTwotoneAppstore size="32"></AiTwotoneAppstore>
         </button>
       </li>
 
