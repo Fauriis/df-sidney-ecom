@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { CgClose, CgMenu } from 'react-icons/cg';
-import { FaSun } from 'react-icons/fa';
+import { FaSun, FcSignature } from 'react-icons/fa';
 
 export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
