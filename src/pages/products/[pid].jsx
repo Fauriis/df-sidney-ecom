@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { baseUrl } from '../..';
-import { CartControl } from '../../components/cart';
 import { Layout } from '../../layouts/layout';
+import { BiLoaderCircle } from 'react-icons/bi';
+import { CartControl } from '../../components/cart';
+import { baseUrl } from '../..';
 
 const ProductPage = () => {
   const router = useRouter();
@@ -25,7 +26,11 @@ const ProductPage = () => {
   }, [pid]);
 
   if (product === null) {
-    return <></>;
+    return (
+      <div className="flex h-screen w-screen justify-center items-center">
+        <BiLoaderCircle size="48" className="animate-spin"></BiLoaderCircle>
+      </div>
+    );
   }
 
   const { id, title, description, price, image } = product;
@@ -43,8 +48,6 @@ const ProductPage = () => {
       <Layout>
         <main>
           <header className="container px-4 mx-auto lg:px-0 flex justify-between">
-            <div></div>
-
             <CartControl></CartControl>
           </header>
 

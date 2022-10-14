@@ -1,8 +1,15 @@
 import Head from 'next/head';
-import { CartControl } from '../components/cart/CartControl';
+import { CartControl } from '../components/cart';
+import { useCart } from '../hooks';
 import { Layout } from '../layouts';
 
 const Cart = () => {
+  // const cart = useCart(2);
+
+  // if (cart === null) {
+  //   return <></>;
+  // }
+
   return (
     <>
       <Head>
@@ -15,9 +22,11 @@ const Cart = () => {
             <div></div>
 
             <CartControl></CartControl>
+            {/* <CartControl cart={cart}></CartControl> */}
           </header>
 
-          <section className="mt-16">cart goes here</section>
+          <section className="mt-16"></section>
+          {/* <section className="mt-16">{cart.id}</section> */}
         </main>
       </Layout>
     </>
