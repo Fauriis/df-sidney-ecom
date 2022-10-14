@@ -11,7 +11,10 @@ export const Header = () => {
       <section className="flex justify-between items-center h-full z-30 relative lg:flex-col lg:py-4 ">
         <Link href="/">
           <a title="Home" className=" flex flex-col">
-            <FaSun size="32" className="hover:animate-spin"></FaSun>
+            <FaSun
+              size="32"
+              className="hover:animate-spin hover:text-orange-400"
+            ></FaSun>
             <p className="text-center">SUN</p>
           </a>
         </Link>
