@@ -1,2 +1,2 @@
 export * from './CartControl';
-export * from './BackHome';
+export * from './ContinueShopping';

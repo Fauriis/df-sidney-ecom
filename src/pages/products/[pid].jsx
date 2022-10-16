@@ -6,7 +6,7 @@ import { BiLoaderCircle } from 'react-icons/bi';
 import { CartControl } from '../../components/cart';
 import { baseUrl } from '../..';
 import Link from 'next/link';
-import BackHome from '../../components/cart/BackHome';
+import ContinueShopping from '../../components/cart/ContinueShopping';
 
 const ProductPage = () => {
   const router = useRouter();
@@ -84,7 +84,7 @@ const ProductPage = () => {
                   Add to cart
                 </button>
               </div>
-              <BackHome></BackHome>
+              <ContinueShopping></ContinueShopping>
             </header>
           </section>
           <section className="border-t"></section>

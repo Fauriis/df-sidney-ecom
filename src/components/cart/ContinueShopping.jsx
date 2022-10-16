@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { IoIosArrowBack } from 'react-icons/io';
 
-const BackHome = () => {
+const ContinueShopping = () => {
   return (
     <>
       <Link href="/">
@@ -18,4 +18,4 @@ const BackHome = () => {
   );
 };
 
-export default BackHome;
+export default ContinueShopping;

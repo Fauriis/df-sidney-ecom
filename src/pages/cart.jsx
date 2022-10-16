@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { CartControl } from '../components/cart';
-import BackHome from '../components/cart/BackHome';
+import ContinueShopping from '../components/cart/ContinueShopping';
 import { useCart } from '../hooks';
 import { Layout } from '../layouts';
 
@@ -27,7 +27,7 @@ const Cart = () => {
           </header>
 
           <div className="flex justify-end mt-10">
-            <BackHome></BackHome>
+            <ContinueShopping></ContinueShopping>
           </div>
           {/* <section className="mt-16"></section> */}
           <section className="mt-16">{cart.id}</section>
