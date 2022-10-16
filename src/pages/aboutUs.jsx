@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Layout } from '../layouts';
 
-const ContactPage = () => {
+const AboutUs = () => {
   return (
     <>
       <Head>
@@ -9,7 +9,7 @@ const ContactPage = () => {
       </Head>
 
       <Layout>
-        <main>Contact us</main>
+        <main>About SUN</main>
       </Layout>
     </>
   );
@@ -17,4 +17,4 @@ const ContactPage = () => {
 
 // este obligatoriu sa returnam un default export
 // pentru fiecare pagina
-export default ContactPage;
+export default AboutUs;

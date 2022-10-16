@@ -5,6 +5,8 @@ import { Layout } from '../../layouts/layout';
 import { BiLoaderCircle } from 'react-icons/bi';
 import { CartControl } from '../../components/cart';
 import { baseUrl } from '../..';
+import Link from 'next/link';
+import BackHome from '../../components/cart/BackHome';
 
 const ProductPage = () => {
   const router = useRouter();
@@ -70,9 +72,9 @@ const ProductPage = () => {
                 </span>
               </div>
 
-              <div className="mt-12">
+              <div className="mt-12 mb-6">
                 <button
-                  className="bg-black text-white uppercase font-medium text-sm py-3 px-6 hover:animate-pulse hover:bg-amber-800 transition-colors"
+                  className="bg-black text-white uppercase font-medium text-sm py-3 px-6 hover:animate-pulse hover:bg-pink-500 transition-colors"
                   title={`Add ${title} to cart`}
                   type="button"
                   onClick={() => {
@@ -82,6 +84,7 @@ const ProductPage = () => {
                   Add to cart
                 </button>
               </div>
+              <BackHome></BackHome>
             </header>
           </section>
           <section className="border-t"></section>

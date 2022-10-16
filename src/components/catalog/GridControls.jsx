@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { AiTwotoneAppstore } from 'react-icons/ai';
+import { BiRectangle } from 'react-icons/bi';
+import { BsGrid } from 'react-icons/bs';
 
 const buttonClasses = `w-24 h-24 border-l border-zinc-400 flex justify-center items-center`;
 
@@ -15,7 +16,7 @@ export const GridControls = ({ setPerRow = () => {} }) => {
   }, [itemsPerRow]);
 
   return (
-    <ul className="flex border border-l-0 border-r-0 border-zinc-400">
+    <ul className="flex border border-zinc-400 border-r-0 border-l-0">
       <li>
         <button
           title="One per row"
@@ -26,7 +27,7 @@ export const GridControls = ({ setPerRow = () => {} }) => {
             setItemsPerRow('1/row');
           }}
         >
-          <AiTwotoneAppstore size="32"></AiTwotoneAppstore>
+          <BiRectangle size="32"></BiRectangle>
         </button>
       </li>
 
@@ -40,7 +41,8 @@ export const GridControls = ({ setPerRow = () => {} }) => {
             setItemsPerRow('2/row');
           }}
         >
-          2
+          <BiRectangle size="32"></BiRectangle>
+          <BiRectangle size="32"></BiRectangle>
         </button>
       </li>
 
@@ -54,7 +56,7 @@ export const GridControls = ({ setPerRow = () => {} }) => {
             setItemsPerRow('4/row');
           }}
         >
-          4
+          <BsGrid size="32"></BsGrid>
         </button>
       </li>
     </ul>

@@ -1,4 +1,4 @@
-import { BsFillArrowUpCircleFill } from 'react-icons/bs';
+import { IoIosArrowDropup } from 'react-icons/io';
 
 export const Footer = () => {
   const scrollToTop = () =>
@@ -9,11 +9,13 @@ export const Footer = () => {
 
   return (
     <>
-      <section className="container px-4 lg:px-0 mx-auto">
-        <div className="flex justify-between my-10">
-          <ul className="text-gray-700">
+      <section className="container px-4 lg:px-0 mx-auto ">
+        <div className="grid grid-cols-2 my-10 lg:my-6 lg:gap-5  lg:grid-cols-4">
+          <ul className="text-gray-700 lg:text-lg">
             <li>
-              <h1 className="uppercase text-xl text-black mb-5">Los Angeles</h1>
+              <h1 className="uppercase text-xl text-black mb-5 lg:text-2xl">
+                Los Angeles
+              </h1>
             </li>
 
             <li>
@@ -31,9 +33,9 @@ export const Footer = () => {
             </li>
           </ul>
 
-          <ul className="text-gray-700">
+          <ul className="text-gray-700 lg:text-lg">
             <li>
-              <h1 className="uppercase text-xl text-black mb-5">
+              <h1 className="uppercase text-xl text-black mb-5 lg:text-2xl">
                 San Francisco
               </h1>
             </li>
@@ -52,12 +54,12 @@ export const Footer = () => {
               <a href="mailto:info@sun.com">info@sun.com</a>
             </li>
           </ul>
-        </div>
 
-        <div className="flex justify-between my-10 ">
-          <ul className="text-gray-700">
+          <ul className="text-gray-700 lg:text-lg">
             <li>
-              <h1 className="uppercase text-black text-xl mb-5">New York</h1>
+              <h1 className="uppercase text-black text-xl mb-5 lg:text-2xl mt-10 lg:mt-0">
+                New York
+              </h1>
             </li>
 
             <li>
@@ -75,12 +77,12 @@ export const Footer = () => {
             </li>
           </ul>
 
-          <ul className="text-gray-700 text mr-16">
-            <li>
-              <h1 className="uppercase text-xl text-black mb-5">Follow Us</h1>
-            </li>
+          <ul className="text-gray-700 text lg:text-lg grid grid-cols-2">
+            <h1 className="uppercase text-xl text-black mb-5 lg:text-2xl mt-10 lg:mt-0">
+              Follow Us
+            </h1>
 
-            <li>
+            <li className="relative lg:top-6 -bottom-16">
               <a href="">Facebook</a>
             </li>
 
@@ -111,21 +113,22 @@ export const Footer = () => {
         </div>
       </section>
 
-      <div className="border-t border-neutral-400 "> </div>
+      <div className="border-t border-neutral-400 "></div>
       <div className="text-center relative bottom-4">
         <button
           onClick={scrollToTop}
-          className="hover:animate-bounce hover:text-pink-200 mb-10"
+          className="hover:animate-bounce hover:text-pink-600 bg-gray-100"
         >
-          <BsFillArrowUpCircleFill
+          <IoIosArrowDropup
             size="36"
+            title="Back to top!"
             className=""
-          ></BsFillArrowUpCircleFill>
+          ></IoIosArrowDropup>
         </button>
       </div>
 
       <section className="container px-4 lg:px-0 mx-auto">
-        <h2 className="text-center mt-10 mb-10">© 2022. Created by Sun.</h2>
+        <h2 className="text-center mt-5 mb-5">© 2022. Created by Sun.</h2>
       </section>
     </>
   );

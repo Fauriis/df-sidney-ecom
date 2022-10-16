@@ -1,12 +1,13 @@
 import { css } from '@emotion/css';
-
 import { ProductTile } from './ProductTile';
 
 export const ProductGrid = ({ products = [], perRow = 4 }) => {
   if (products.length <= 0) {
     return (
       <>
-        <div>no products</div>
+        <div className="text-2xl text-black text-center font-bold">
+          No products here
+        </div>
       </>
     );
   }
@@ -25,7 +26,7 @@ export const ProductGrid = ({ products = [], perRow = 4 }) => {
     <ul className={gridCss}>
       {products.map((product, index) => {
         return (
-          <li key={index}>
+          <li key={index} className="">
             <ProductTile product={product}></ProductTile>
           </li>
         );

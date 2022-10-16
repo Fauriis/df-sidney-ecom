@@ -9,9 +9,9 @@ export const ProductTile = ({ product }) => {
   }).format(price);
 
   return (
-    <article article="w-full">
+    <article article="w-full ">
       <header>
-        <div className="w-full text-center ">
+        <div className="w-full text-center hover:ease-out">
           <Link href={`/products/${id}`}>
             <a title={title}>
               <Image
@@ -20,7 +20,7 @@ export const ProductTile = ({ product }) => {
                 width={200}
                 height={200}
                 objectFit="contain"
-                className="inline -z-10"
+                className="inline -z-10 2"
               ></Image>
             </a>
           </Link>
