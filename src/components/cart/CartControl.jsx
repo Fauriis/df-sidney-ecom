@@ -1,16 +1,24 @@
 import Link from 'next/link';
+import { useContext, useState } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { AppContext } from '../../pages/_app';
 
-export const CartControl = ({ cart }) => {
-  // const { products } = cart;
+export const CartControl = () => {
+  const { cart } = useContext(AppContext);
 
-  // const cartQty = products.reduce((cartQty, product) => {
-  //   const { quantity } = product;
+  if (cart === null) {
+    return <></>;
+  }
 
-  //   cartQty += quantity;
+  const { products } = cart;
 
-  //   return cartQty;
-  // }, 0);
+  const cartQty = products.reduce((cartQty, product) => {
+    const { quantity } = product;
+
+    cartQty += quantity;
+
+    return cartQty;
+  }, 0);
 
   return (
     <ul className="border border-zinc-400">
@@ -24,7 +32,7 @@ export const CartControl = ({ cart }) => {
               size={32}
               className=""
             ></AiOutlineShoppingCart>
-            {/* {cartQty} */}
+            {cartQty}
           </a>
         </Link>
       </li>

@@ -1,38 +1,27 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import { Layout } from '../../layouts/layout';
 import { BiLoaderCircle } from 'react-icons/bi';
 import { CartControl } from '../../components/cart';
-import { baseUrl } from '../..';
-import Link from 'next/link';
 import ContinueShopping from '../../components/cart/ContinueShopping';
+import { useProduct } from '../../hooks/useProduct';
+import { useEffect, useState } from 'react';
 
 const ProductPage = () => {
   const router = useRouter();
   const { pid } = router.query;
-  const [product, setProduct] = useState(null);
+  const { product, status } = useProduct(pid);
 
-  useEffect(() => {
-    if (pid === undefined) {
-      return;
-    }
-
-    fetch(`${baseUrl}/products/${pid}`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((result) => {
-        setProduct(result);
-      });
-  }, [pid]);
-
-  if (product === null) {
+  if (product === null && status !== '404') {
     return (
       <div className="flex h-screen w-screen justify-center items-center">
         <BiLoaderCircle size="48" className="animate-spin"></BiLoaderCircle>
       </div>
     );
+  }
+
+  if (status === '404') {
+    return <span>product not found</span>;
   }
 
   const { id, title, description, price, image } = product;
@@ -91,7 +80,24 @@ const ProductPage = () => {
             </header>
           </section>
           <section className="border-t"></section>
-          <section className="container px-4 mx-auto lg:px-0">jos</section>
+
+          <section className="container px-4 mx-auto lg:px-0">
+            <ul className="grid grid-cols-3 text-center my-10 uppercase lg:text-lg">
+              <li className="hover:bg-pink-500 transition-colors">
+                {' '}
+                <a href="">Description</a>{' '}
+              </li>
+
+              <li className="hover:bg-pink-500 transition-colors">
+                {' '}
+                <a href=""> Additional information</a>
+              </li>
+
+              <li className="hover:bg-pink-500 transition-colors">
+                <a href=""> Reviews</a>
+              </li>
+            </ul>
+          </section>
         </main>
       </Layout>
     </>
