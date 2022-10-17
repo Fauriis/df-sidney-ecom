@@ -49,9 +49,13 @@ const ProductPage = () => {
 
       <Layout>
         <main>
-          <header className="container px-4 mx-auto lg:px-0 flex justify-between">
-            <CartControl></CartControl>
+          <header className="container">
+            <ContinueShopping></ContinueShopping>
           </header>
+
+          <div className="container flex justify-end mx-auto">
+            <CartControl></CartControl>
+          </div>
 
           <section className="container mt-16 px-4 mx-auto lg:px-0 grid gap-8 grid-cols-12">
             <div className="col-start-1 col-span-5">
@@ -84,7 +88,6 @@ const ProductPage = () => {
                   Add to cart
                 </button>
               </div>
-              <ContinueShopping></ContinueShopping>
             </header>
           </section>
           <section className="border-t"></section>
