@@ -3,17 +3,12 @@ import { useCart } from '../hooks';
 import './../styles/index.css';
 
 export const AppContext = createContext();
-const initialValue = {
-  cart: {
-    qty: 0,
-  },
-};
 
 function MyApp({ Component, pageProps }) {
-  const cart = useCart();
+  const { cart, setCart, addProduct } = useCart();
 
   return (
-    <AppContext.Provider value={{ cart }}>
+    <AppContext.Provider value={{ cart, setCart, addProduct }}>
       <Component {...pageProps} />;
     </AppContext.Provider>
   );

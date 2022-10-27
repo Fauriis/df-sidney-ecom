@@ -5,7 +5,9 @@ import { BiLoaderCircle } from 'react-icons/bi';
 import { CartControl } from '../../components/cart';
 import ContinueShopping from '../../components/cart/ContinueShopping';
 import { useProduct } from '../../hooks/useProduct';
-import { useEffect, useState } from 'react';
+import ProductReviews from '../../components/catalog/ProductReviews';
+import { AddToCart, RelatedProducts } from '../../components/catalog';
+import Image from 'next/image';
 
 const ProductPage = () => {
   const router = useRouter();
@@ -48,16 +50,22 @@ const ProductPage = () => {
 
           <section className="container mt-16 px-4 mx-auto lg:px-0 grid gap-8 grid-cols-12">
             <div className="col-start-1 col-span-5">
-              <img
+              <Image
                 alt={`Image of ${title}`}
                 src={image}
                 className="block w-full"
-              ></img>
+                width="650"
+                height="650"
+                objectFit="contain"
+              ></Image>
             </div>
 
             <header className="col-start-7 col-span-6 pt-12">
               <h1 className="text-2xl uppercase font-medium">{title}</h1>
-              <p className="mt-12">{description}</p>
+
+              <ProductReviews></ProductReviews>
+
+              <p className="mt-8">{description}</p>
 
               <div className="mt-12">
                 <span className="text-3xl leading-9 font-bold">
@@ -66,16 +74,7 @@ const ProductPage = () => {
               </div>
 
               <div className="mt-12 mb-6">
-                <button
-                  className="bg-black text-white uppercase font-medium text-sm py-3 px-6 hover:animate-pulse hover:bg-pink-500 transition-colors"
-                  title={`Add ${title} to cart`}
-                  type="button"
-                  onClick={() => {
-                    alert(id);
-                  }}
-                >
-                  Add to cart
-                </button>
+                <AddToCart product={product}></AddToCart>
               </div>
             </header>
           </section>
@@ -98,6 +97,8 @@ const ProductPage = () => {
               </li>
             </ul>
           </section>
+
+          {/* <RelatedProducts></RelatedProducts> */}
         </main>
       </Layout>
     </>
