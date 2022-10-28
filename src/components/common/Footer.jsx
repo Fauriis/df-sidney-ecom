@@ -77,39 +77,41 @@ export const Footer = () => {
             </li>
           </ul>
 
-          <ul className="text-gray-700 text lg:text-lg grid grid-cols-2">
+          <div>
             <h1 className="uppercase text-xl text-black mb-5 lg:text-2xl mt-10 lg:mt-0">
               Follow Us
             </h1>
 
-            <li className="relative lg:top-6 -bottom-16">
-              <a href="">Facebook</a>
-            </li>
+            <ul className="text-gray-700 text lg:text-lg grid grid-cols-2">
+              <li>
+                <a href="">Facebook</a>
+              </li>
 
-            <li>
-              <a href="">Twitter</a>
-            </li>
+              <li>
+                <a href="">Twitter</a>
+              </li>
 
-            <li>
-              <a href="">Instagram</a>
-            </li>
+              <li>
+                <a href="">Instagram</a>
+              </li>
 
-            <li>
-              <a href="">LinkedIn</a>
-            </li>
+              <li>
+                <a href="">LinkedIn</a>
+              </li>
 
-            <li>
-              <a href="">Dribble</a>
-            </li>
+              <li>
+                <a href="">Dribble</a>
+              </li>
 
-            <li>
-              <a href="">Behance</a>
-            </li>
+              <li>
+                <a href="">Behance</a>
+              </li>
 
-            <li>
-              <a href="">Pinterest</a>
-            </li>
-          </ul>
+              <li>
+                <a href="">Pinterest</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

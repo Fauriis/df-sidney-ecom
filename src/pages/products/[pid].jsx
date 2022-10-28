@@ -26,7 +26,7 @@ const ProductPage = () => {
     return <span>product not found</span>;
   }
 
-  const { id, title, description, price, image } = product;
+  const { id, title, description, price, image, rating, category } = product;
   const formattedPrice = new Intl.NumberFormat('en-US', {
     currency: 'USD',
     style: 'currency',
@@ -53,7 +53,7 @@ const ProductPage = () => {
               <Image
                 alt={`Image of ${title}`}
                 src={image}
-                className="block w-full"
+                className="block w-full -z-10"
                 width="650"
                 height="650"
                 objectFit="contain"
@@ -63,7 +63,10 @@ const ProductPage = () => {
             <header className="col-start-7 col-span-6 pt-12">
               <h1 className="text-2xl uppercase font-medium">{title}</h1>
 
-              <ProductReviews></ProductReviews>
+              <ProductReviews
+                rate={rating.rate}
+                count={rating.count}
+              ></ProductReviews>
 
               <p className="mt-8">{description}</p>
 
@@ -98,7 +101,10 @@ const ProductPage = () => {
             </ul>
           </section>
 
-          {/* <RelatedProducts></RelatedProducts> */}
+          <RelatedProducts
+            productCategory={category}
+            productId={id}
+          ></RelatedProducts>
         </main>
       </Layout>
     </>

@@ -12,7 +12,7 @@ export const ProductTile = ({ product }) => {
   return (
     <article article="w-full ">
       <header>
-        <div className="w-full text-center hover:ease-out">
+        <div className="w-full text-center">
           <Link href={`/products/${id}`}>
             <a title={title}>
               <Image
@@ -21,7 +21,7 @@ export const ProductTile = ({ product }) => {
                 width={200}
                 height={200}
                 objectFit="contain"
-                className="inline -z-10 2"
+                className="inline -z-10"
               ></Image>
             </a>
           </Link>
