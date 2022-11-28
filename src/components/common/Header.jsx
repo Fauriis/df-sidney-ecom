@@ -65,7 +65,7 @@ export const Header = () => {
       <nav
         className={`absolute left-0 -top-full transition-transform transform-gpu ${
           menuOpen ? 'translate-y-full' : ' '
-        } h-screen w-screen lg:w-screen-1/3 text-white bg-neutral-900 lg:pl-26 pt-80`}
+        } h-screen w-screen lg:w-screen-1/3 text-white bg-neutral-900 lg:pl-26 pt-80 z-20`}
       >
         <ul className="text-lg text-center uppercase lg:text-3xl flex flex-col justify-center gap-y-5 animate-pulse">
           <li className="hover:text-pink-500 hover:cursor-pointer">

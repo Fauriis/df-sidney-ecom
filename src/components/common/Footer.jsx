@@ -20,7 +20,7 @@ export const Footer = () => {
 
             <li>
               <a href="">
-                145 Oliveshka Street, <br /> Los Angeles, LA 90003
+                145 Oliveshka Street, <br /> Los Angeles, LA 903
               </a>
             </li>
 

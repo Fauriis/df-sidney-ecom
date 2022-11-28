@@ -42,7 +42,7 @@ export const Pagination = ({ products, setPaginatedProducts }) => {
               key={index}
               className={`${
                 i === page ? 'font-bold' : ''
-              }  hover:text-pink-300`}
+              }  hover:text-pink-300 hover:bg-black hover:rounded-3xl`}
               onClick={() => {
                 if (i === page) {
                   return;
