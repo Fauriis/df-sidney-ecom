@@ -6,8 +6,13 @@ import { CartControl } from '../../components/cart';
 import ContinueShopping from '../../components/cart/ContinueShopping';
 import { useProduct } from '../../hooks/useProduct';
 import ProductReviews from '../../components/catalog/ProductReviews';
-import { AddToCart, RelatedProducts } from '../../components/catalog';
-import Image from 'next/image';
+import {
+  AddToCart,
+  ProductsImages,
+  RelatedProducts,
+} from '../../components/catalog';
+
+import { ProductZoom } from './ProductZoom';
 
 const ProductPage = () => {
   const router = useRouter();
@@ -48,19 +53,15 @@ const ProductPage = () => {
             <CartControl></CartControl>
           </div>
 
-          <section className="container mt-16 px-4 mx-auto lg:px-0 grid gap-8 grid-cols-12">
-            <div className="col-start-1 col-span-5">
-              <Image
-                alt={`Image of ${title}`}
-                src={image}
-                className="block w-full -z-10"
-                width="650"
-                height="650"
-                objectFit="contain"
-              ></Image>
+          <section className="container mt-16 px-4 mx-auto lg:px-0 grid gap-8 grid-cols-12 ">
+            <div className="lg:block hidden ml-12 mt-12">
+              <ProductsImages></ProductsImages>
+            </div>
+            <div className="lg:col-start-4 lg:col-span-6 col-start-2 col-span-9 ">
+              <ProductZoom className="-z-10"></ProductZoom>
             </div>
 
-            <header className="col-start-7 col-span-6 pt-12">
+            <header className="lg:col-start-4 lg:col-span-6 lg:text-center lg:pt-12 col-start-2 col-span-10">
               <h1 className="text-2xl uppercase font-medium">{title}</h1>
 
               <ProductReviews
@@ -68,7 +69,7 @@ const ProductPage = () => {
                 count={rating.count}
               ></ProductReviews>
 
-              <p className="mt-8">{description}</p>
+              <p className="mt-8 ">{description}</p>
 
               <div className="mt-12">
                 <span className="text-3xl leading-9 font-bold">

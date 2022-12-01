@@ -19,7 +19,7 @@ export const ProductTile = ({ product }) => {
                 alt={`Image for product ${title}`}
                 src={image}
                 width={200}
-                height={200}
+                height={400}
                 objectFit="contain"
                 className="inline -z-10"
               ></Image>
@@ -29,9 +29,11 @@ export const ProductTile = ({ product }) => {
       </header>
 
       <section className="mt-8 text-center text-sm">
-        <h1 className="uppercase text-zinc-400 mb-2">{title}</h1>
+        <h1 className="uppercase text-black text-xl mb-2">{title}</h1>
 
-        <div className="text-zinc-900 font-light">{formattedPrice}</div>
+        <div className="text-pink-500 font-bold my-4 text-lg">
+          {formattedPrice}
+        </div>
 
         <AddToCart product={product}></AddToCart>
       </section>
