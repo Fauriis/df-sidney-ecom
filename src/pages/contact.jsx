@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { Layout } from '../layouts';
+import ContactDetails from './Contact/ContactDetails';
+import Map from './Contact/Map';
 
 const ContactPage = () => {
   return (
@@ -9,7 +11,13 @@ const ContactPage = () => {
       </Head>
 
       <Layout>
-        <main>Contact us</main>
+        <div className="-z-10 lg:mx-10 lg:my-4">
+          <Map></Map>
+        </div>
+
+        <div className="lg:mb-6">
+          <ContactDetails></ContactDetails>
+        </div>
       </Layout>
     </>
   );
