@@ -55,7 +55,7 @@ const AboutUs = () => {
                   type="button"
                   className="uppercase lg:font-bold bg-black text-white hover:bg-pink-500 p-2 lg:px-6 lg:py-2"
                 >
-                  Go to shop
+                  Go to
                 </button>
               </Link>
             </header>
