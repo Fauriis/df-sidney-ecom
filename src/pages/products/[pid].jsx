@@ -68,7 +68,7 @@ const ProductPage = () => {
                 count={rating.count}
               ></ProductReviews>
 
-              <p className="mt-8 ">{description}</p>
+              <p className="mt-6 ">{description}</p>
 
               <div className="mt-12">
                 <span className="text-3xl leading-9 font-bold">
