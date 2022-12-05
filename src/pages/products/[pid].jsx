@@ -11,8 +11,7 @@ import {
   ProductsImages,
   RelatedProducts,
 } from '../../components/catalog';
-
-import { ProductZoom } from './ProductZoom';
+import { ProductZoom } from '../../components/zoom/ProductZoom';
 
 const ProductPage = () => {
   const router = useRouter();
