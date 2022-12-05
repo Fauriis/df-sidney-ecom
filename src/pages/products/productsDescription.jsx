@@ -1,4 +1,4 @@
-// export const productsDescription = () => {
+// const productsDescription = () => {
 //   return (
 //     <div>
 //       <ul className="grid grid-cols-3 text-center my-10 uppercase lg:text-lg">
@@ -19,3 +19,5 @@
 //     </div>
 //   );
 // };
+
+// export default productsDescription;
