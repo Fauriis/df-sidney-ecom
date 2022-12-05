@@ -1,6 +1,6 @@
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
-import { CartControl } from '../../components/cart';
-import ContinueShopping from '../../components/cart/ContinueShopping';
+import { CartControl } from '../cart';
+import ContinueShopping from '../cart/ContinueShopping';
 import { useCart } from '../../hooks';
 
 export default function Map() {

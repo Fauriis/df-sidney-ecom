@@ -1,7 +1,7 @@
 import Head from 'next/head';
+import Map from '../components/information/Map';
+import ContactDetails from '../components/information/ContactDetails';
 import { Layout } from '../layouts';
-import ContactDetails from './Contact/ContactDetails';
-import Map from './Contact/Map';
 
 const ContactPage = () => {
   return (
