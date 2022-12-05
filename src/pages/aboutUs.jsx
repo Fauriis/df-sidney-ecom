@@ -12,7 +12,7 @@ const AboutUs = () => {
 
       <Layout>
         <main className="mb-10">
-          <div className="container mx-auto mt-4">
+          <div className="container mx-auto">
             <Image
               src="https://images.pexels.com/photos/3182746/pexels-photo-3182746.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Company"
