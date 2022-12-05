@@ -2,7 +2,7 @@ export default function ContactDetails() {
   return (
     <>
       <section className="lg:flex mt-6 mx-6 lg:mb-8 lg:container lg:mx-auto lg:justify-between">
-        <div className="lg:">
+        <div className="lg:ml-8">
           <h1 className="uppercase font-bold my-4 lg:text-2xl">
             Contact Info:
           </h1>
@@ -33,7 +33,7 @@ export default function ContactDetails() {
           </h3>
         </div>
 
-        <div className=" ">
+        <div className="lg:mr-8">
           <form action="" id="form" className="">
             <div className="lg:flex lg:flex-row lg:gap-4 lg:mb-2">
               <input
