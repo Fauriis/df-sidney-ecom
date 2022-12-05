@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { AppContext } from '../../pages/_app';
 

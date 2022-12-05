@@ -1,7 +1,6 @@
 import { useContext, useEffect, useReducer, useState } from 'react';
 import { AppContext } from '../../pages/_app';
 import { CartLineItem } from './CartLineItem';
-import { ProductReviwes } from './../catalog/ProductReviews';
 
 export const CartItems = () => {
   const { cart } = useContext(AppContext);
