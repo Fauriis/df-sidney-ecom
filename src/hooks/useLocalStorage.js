@@ -9,14 +9,14 @@ export const useLocalStorage = (keyName, defaultValue = '') => {
     if (savedValue !== null) {
       setValue(savedValue);
     }
-  }, [setValue]);
+  }, [setValue, keyName]);
 
   useEffect(() => {
     if (value === defaultValue) {
       return;
     }
     localStorage.setItem(keyName, value);
-  }, [value]);
+  }, [value, keyName, defaultValue]);
 
   return [value, setValue];
 };
