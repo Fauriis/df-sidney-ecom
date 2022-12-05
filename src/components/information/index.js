@@ -1,2 +1,2 @@
-export * from './Map';
 export * from './ContactDetails';
+export * from './Map';
