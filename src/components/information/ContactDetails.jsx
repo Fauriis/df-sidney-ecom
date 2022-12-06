@@ -37,7 +37,7 @@ export default function ContactDetails() {
           <form action="" id="form" className="">
             <div className="lg:flex lg:flex-row lg:gap-4 lg:mb-2">
               <input
-                className="border my-2 lg:py-2 lg:px-6 "
+                className="border lg:py-2 lg:px-6 "
                 type="text"
                 placeholder="Your name"
                 required
@@ -61,9 +61,9 @@ export default function ContactDetails() {
 
               <textarea
                 className="border mb-2"
-                rows={6}
+                rows={4}
                 type="text"
-                placeholder="Your comment"
+                placeholder="    Your comment"
               />
             </div>
           </form>

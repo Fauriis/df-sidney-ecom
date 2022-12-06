@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <>
       <section className="container px-4 lg:px-0 mx-auto ">
-        <div className="grid grid-cols-2 my-10 lg:my-6 lg:gap-5  lg:grid-cols-4">
+        <div className="grid grid-cols-2 my-10 gap-3 lg:my-6 lg:gap-5  lg:grid-cols-4">
           <ul className="text-gray-700 lg:text-lg">
             <li>
               <h1 className="uppercase text-xl text-black mb-5 lg:text-2xl">
@@ -129,7 +129,7 @@ export const Footer = () => {
         </button>
       </div>
 
-      <section className="container px-4 lg:px-0 mx-auto">
+      <section className="container lg:px-0 mx-auto">
         <h2 className="text-center mt-5 mb-5">© 2022. Created by Sun.</h2>
       </section>
     </>
