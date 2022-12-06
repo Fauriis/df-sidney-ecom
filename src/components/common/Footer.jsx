@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
     <>
       <section className="container px-4 lg:px-0 mx-auto ">
-        <div className="grid grid-cols-2 my-10 gap-3 lg:my-6 lg:gap-5  lg:grid-cols-4">
+        <div className="grid grid-cols-2 my-6 gap-8 lg:my-6 lg:gap-5  lg:grid-cols-4">
           <ul className="text-gray-700 lg:text-lg">
             <li>
               <h1 className="uppercase text-xl text-black mb-5 lg:text-2xl">
